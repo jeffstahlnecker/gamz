@@ -1,0 +1,12 @@
+{
+  "name": "gamz",
+  "version": "0.0.1",
+  "description": "An app to bring your friends and family together for an epic game night. ",
+  "main": "index.js",
+  "repository": "https://github.com/jeffstahlnecker/gamz",
+  "author": "jeffstahlnecker <jeff@stahlnecker.me>",
+  "license": "GNU GPLv3",
+  "devDependencies": {
+    "lerna": "^3.22.1"
+  }
+}
