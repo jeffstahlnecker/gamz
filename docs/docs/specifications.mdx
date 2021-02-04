@@ -22,6 +22,55 @@ While this specification document outlines the full specifications of the Gamz a
 ## Database Design
 Gamz uses PostgresSQL. In Gamz a user can be part of more than one Gamz server, and each Gamz server will have multiple users.
 
+### Users
+| Column       |     Type     |         Modifiers       |
+| :----------- | :----------- | :---------------------- |
+| user_id           | BIGSERIAL    | NOT NULL PRIMARY KEY    |
+| email        | VARCHAR(100) | NOT NULL                |
+| display_name | VARCHAR(50)  | NOT NULL                |
+| server_ids   | integer[]    |                         |
+
+```sql
+CREATE TABLE users (
+    id BIGSERIAL NOT NULL PRIMARY KEY,
+    email VARCHAR(100) NOT NULL,
+    display_name VARCHAR(50) NOT NULL,
+);
+```
+
+### Servers
+
+**To Do* Add server settings
+
+| Column       |     Type     |         Modifiers       |
+| :----------- | :----------- | :---------------------- |
+| server_id    | BIGSERIAL    | NOT NULL PRIMARY KEY    |
+| server_name  | VARCHAR(100) | NOT NULL                |
+| server_admins| integer[]    |  NOT NULL               |
+| user_ids     | integer[]    |                         |
+
+
+### Live Chat
+** Chatrooms **
+
+Each conversation will take place in a chatroom. A chatroom can only be part of one server.
+
+A chatroom will consist of two or more users.
+
+In order to handle a higher table read/write load we will add ten chatroom tables, the chatID will determine which table needs to be written to using `[id]mod10`.
+
+Those that result in `0` will be written to table 10.
+
+| Column       |     Type     |         Modifiers       |
+| :----------- | :----------- | :---------------------- |
+| chatroom_id  |              | NOT NULL PRIMARY KEY    |
+| sender_id    |    | NOT NULL                |
+| message      |    |  NOT NULL               |
+| sent_at      |    |        NOT NULL                 |
+| chat_members |    |        NOT NULL                 |
+| server_id    |    |                   |
+| user_ids    |  integer[]  |                   |
+
 ## Flow Charts
 
 ### User Authentication
