@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": "https://github.com/jeffstahlnecker/gamz",
   "author": "jeffstahlnecker <jeff@stahlnecker.me>",
-  "license": "GNU GPLv3",
+  "license": "GPL-3.0-only",
   "devDependencies": {
     "lerna": "^3.22.1"
   }
