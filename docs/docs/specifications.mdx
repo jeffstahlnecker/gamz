@@ -3,3 +3,37 @@ id: specifications
 title: Development Specifications
 sidebar_label: Specifications
 ---
+
+## Summary
+Gamz is an app where families, groups of friends, and communities can create their own *Gamz Server* with the overall purpose of playing card games and board games as a group. As part of this gaming service, they will be able to schedule games, chat with members in the same service, and video chat while playing a game.
+
+While this specification document outlines the full specifications of the Gamz app, features will be rolled out in stages.
+
+| Version       |      Features      |
+| :----------- | :----------- |
+| 0.1.0     | <ul><li>User authentication (invite only)</li><li>Routing</li><li>Start game now</li><li>Join Game</li><li>Game moves sync through Socket.io</li><li>Spades card game</li></ul>|
+|  0.2.0     |   <ul><li>Private Games (only for selected users)</li><li>Schedule Games</li></ul>    |
+| 0.3.0 |   <ul><li>Live chat in server</li></ul>    |
+| 0.4.0 |   <ul><li>One-on-one Video Chat (WebRTC)</li></ul>    |
+| 0.5.0 |   <ul><li>Group video chat during game (WebRTC)</li></ul>    |
+| 0.6.0 |   <ul><li>Server Admin Control Panel</li></ul>    |
+| 0.7.0 |   <ul><li>Register new user / create new server</li></ul>    |
+
+## Database Design
+Gamz uses PostgresSQL. In Gamz a user can be part of more than one Gamz server, and each Gamz server will have multiple users.
+
+## Flow Charts
+
+### User Authentication
+### Game Dynamics (Socket.io)
+### Start Game Now
+### Join Game
+### Live Chat
+### Video Chat (one-on-one)
+### Group Video Chat
+### Register New User
+### Create New Server
+### Invite User to Server (current user)
+### Invite new User to Server
+
+## API Definitions
