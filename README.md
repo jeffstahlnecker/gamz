@@ -28,6 +28,25 @@ Gamz is a platform for families and friends to come together for a virtual game 
   * ExpressJS (isn't it what most people use anyways?)  
 * PostgreSQL
 
+## Setup your Dev Environment
+**Prereqs**
+* Node 
+* NPM or YARN package manager (I use yarn)
+
+**Setup**
+
+Start by cloning the repo:
+
+`git clone https://github.com/jeffstahlnecker/gamz`
+
+Change directory and install dependencies:
+
+`cd gamz && yarn install`
+
+Start it up! When you start it, any change made will result in a hot-reload of the system that was changed.
+
+`yarn dev`
+
 ## The Real Purpose of this App
 I'm an "aspiring" developer and I enjoy it. I've read books taken online courses, and now I want to put all that learning together to build one "epic" application. 
 ### Here's what I did before starting: 
