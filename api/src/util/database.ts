@@ -4,7 +4,6 @@ const pgp = pgPromise({})
 
 dotenv.config()
 
-
 const config = {
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -13,4 +12,5 @@ const config = {
   port: process.env.DB_PORT,
 }
 
+// @ts-ignore
 export const db = pgp(config)
