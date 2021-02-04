@@ -6,6 +6,9 @@
   "repository": "https://github.com/jeffstahlnecker/gamz",
   "author": "jeffstahlnecker <jeff@stahlnecker.me>",
   "license": "GPL-3.0-only",
+  "scripts": {
+    "dev": "lerna run dev --stream --parallel"
+  },
   "devDependencies": {
     "lerna": "^3.22.1"
   }

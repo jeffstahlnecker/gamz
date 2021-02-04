@@ -1,5 +1,7 @@
 {
   "packages": [
+    "api",
+    "app",
     "packages/*"
   ],
   "npmClient": "yarn",

@@ -1,21 +1,16 @@
 import pgPromise from 'pg-promise'
-import {load} from 'ts-dotenv'
+import dotenv from 'dotenv'
 const pgp = pgPromise({})
 
-const env = load({
-  DB_PASSWORD: String,
-  DB_USER: String,
-  DB_NAME: String,
-  DB_HOST: String,
-  DB_PORT: Number,
-})
+dotenv.config()
+
 
 const config = {
-  host: env.DB_HOST,
-  user: env.DB_USER,
-  database: env.DB_NAME,
-  password: env.DB_PASSWORD,
-  port: env.DB_PORT,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 }
 
 export const db = pgp(config)
