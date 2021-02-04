@@ -43,6 +43,12 @@ Change directory and install dependencies:
 
 `cd gamz && yarn install`
 
+Note: you actually need to run `yarn install` in each of the following folders:
+* api
+* app
+* docs
+* ./
+
 Start it up! When you start it, any change made will result in a hot-reload of the system that was changed.
 
 `yarn dev`
