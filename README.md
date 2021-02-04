@@ -26,7 +26,7 @@ Gamz is a platform for families and friends to come together for a virtual game 
 * NodeJS
   * [Socket.io](https://socket.io/)
   * ExpressJS (isn't it what most people use anyways?)  
-* MongoDB
+* PostgreSQL
 
 ## The Real Purpose of this App
 I'm an "aspiring" developer and I enjoy it. I've read books taken online courses, and now I want to put all that learning together to build one "epic" application. 
