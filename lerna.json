@@ -2,6 +2,7 @@
   "packages": [
     "api",
     "app",
+    "docs",
     "packages/*"
   ],
   "npmClient": "yarn",
